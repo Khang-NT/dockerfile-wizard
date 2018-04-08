@@ -2,7 +2,7 @@
 
 echo "FROM buildpack-deps:$(awk -F'_' '{print tolower($2)}' <<< $LINUX_VERSION)"
 
-echo "RUN apt-get update && apt-get install unzip"
+echo "RUN apt-get update && apt-get install -y unzip"
 
 echo "RUN curl 'https://dl.google.com/android/repository/android-ndk-r15c-linux-x86_64.zip' --output ndk.zip && \
 unzip -q ndk.zip -d /opt && \
